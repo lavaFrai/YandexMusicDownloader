@@ -58,7 +58,8 @@ if __name__ == "__main__":
             if arg == "--help":
                 print_help_and_exit()
     if token is None:
-        print_help_and_exit()
+        token = "auto"
+        # print_help_and_exit()
     if token == "auto":
         token = __import__("tokenGetter").get_token()
 
